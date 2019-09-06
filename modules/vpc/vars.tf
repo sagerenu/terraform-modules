@@ -5,10 +5,8 @@ variable "tenancy"{
   default="dedicated"
 }
 
-variable "vpc_id"{
-  default="${aws_vpc.main.id}"
-}
+variable "vpc_id"{}
 
 variable "subnet_cidr"{
-  default="10.0.0.0/24"
+  default="10.0.1.0/24"
 }
