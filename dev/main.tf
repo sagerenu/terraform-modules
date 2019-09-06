@@ -8,10 +8,7 @@ provider "aws" {
 }
 module "my_vpc"{
   source = "../modules/vpc"
-  vpc_cidr = "default"
-  tenancy  = "default"
   vpc_id   = "${module.my_vpc.vpc_id}"
-  subnet_cidr = "default"
 }
 module "key_pair" {
   source = "../modules/key_pair"
