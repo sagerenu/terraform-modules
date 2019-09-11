@@ -1,0 +1,14 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [{
+		"Sid": "RestrictResourceDeploymentToSpecificRegion",
+		"Effect": "Deny",
+		"Action": ["*"],
+		"Resource": ["*"],
+		"Condition": {
+			"StringNotEquals": {
+				"aws:RequestedRegion": ["us-east-2", "us-east-1"]
+			}
+		}
+	}]
+}
